@@ -4,9 +4,15 @@
 
 ```bash
 $ sudo certbot --nginx
-$ $ sudo certbot --nginx certonly
+
+#禁用自动配置，不过没必要
+$ sudo certbot --nginx certonly
 ```
 
+它会
+1. 检索nginx配置文件，查找部署在当前机器上的域名
+2. 通过DNS解析验证用户合法性，然后生成证书
+3. 自动配置nginx配置文件
 
 
 ```
